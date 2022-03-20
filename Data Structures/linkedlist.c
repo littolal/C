@@ -43,3 +43,22 @@ void inbeg()
     ptr->link=head;
     head=ptr;
 }
+
+//function for insertion in between
+void inbet()
+{
+    int data,pos;
+    printf("Enter element for insertion\n");
+    scanf("%d",data);
+    printf("Enter position to insert");
+    scanf("%d",pos);
+    ptr2->data=data;
+    struct node ptr=head;
+    struct node* ptr2=malloc(sizeof(struct node));
+    while(pos!=2){
+        ptr=ptr->link;
+        pos--;
+    }
+    ptr2->link=ptr->link;
+    ptr->link=ptr2;
+}
