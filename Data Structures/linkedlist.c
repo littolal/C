@@ -1,11 +1,15 @@
 #include<stdio.h>
 #include<stdlib.h>
+void inbeg();
+void inbet();
+void inend();
+void display();
 
 //creating node
 struct node{
     int data;
     struct node *link;    
-}
+};
 
 //declaring head 
 struct node *head;
@@ -52,9 +56,9 @@ void main(){
         scanf("%d",data);
         printf("Enter position to insert");
         scanf("%d",pos);
-        ptr2->data=data;
         struct node* ptr=head;
         struct node* ptr2=malloc(sizeof(struct node));
+        ptr2->data=data;
         while(pos!=2){
             ptr=ptr->link;
             pos--;
@@ -81,7 +85,7 @@ void main(){
 
     //function for display
     void display()
-    {
+    {   struct node* ptr= head;
         while(ptr!=NULL)
         {
             printf("%d",ptr->data);
