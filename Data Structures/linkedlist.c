@@ -79,7 +79,7 @@ void main(){
         ptr->link=ptr2;
     }
 
-    /*function for display
+    //function for display
     void display()
     {
         while(ptr!=NULL)
@@ -87,4 +87,4 @@ void main(){
             printf("%d",ptr->data);
             ptr=ptr->link;
         }
-    }*/
+    }
