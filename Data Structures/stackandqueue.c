@@ -83,5 +83,47 @@ void qu()
     int a[size];
     do{
         printf("Choose Action: 1.Insertion 2.Deletion 3.Display 4.Exit\n");
-    }
+        scanf("%d",&ch);
+        switch(ch)
+        {
+            case 1:{ if(r==size)
+                        printf("Queue is full\n");
+                    else
+                    {   if(f==0)
+                        {
+                            f++;
+                            r++;
+                        }
+                    }
+                    break;
+                    }
+            case 2:{
+                    if(top==1)
+                        printf("Stack underflow\n");
+                    else
+                    {
+                        printf("Element %d at position %d popped\n",a[top],top);
+                        top--;
+                    }
+                    break;
+                    }
+            case 3: {
+                    if(top==-1)
+                        printf("Stack is empty\n");
+                    else
+                    {
+                        printf("Stack:\n");
+                        for(int i=top;i>=0;i--)
+                        {
+                            printf("%d\n",a[i]);
+                        }
+                    }
+                    break;
+                    }
+            case 4:break;
+            default:{printf("Invalid option\n");
+                    break;
+                    }
+        }
+    }while(ch!=4);
 }
